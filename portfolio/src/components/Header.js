@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, IconButton, Toolbar, Collapse } from '@material-ui/core';
-import SortIcon from '@material-ui/icons/Sort';
+import { AppBar, IconButton, Toolbar, Collapse, Menu } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll';
+// import MenuWidget from './Menu';
+import ResponsiveAppBar from './Appbar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,11 +25,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: '1',
   },
   icon: {
-    color: '#fff',
+    color: '#CDDC39',
     fontSize: '2rem',
   },
   colorText: {
-    color: '#5AFF3D',
+    color: '#CDDC39',
   },
   container: {
     textAlign: 'center',
@@ -50,16 +51,7 @@ export default function Header() {
   }, []);
   return (
     <div className={classes.root} id="header">
-      <AppBar className={classes.appbar} elevation={0}>
-        <Toolbar className={classes.appbarWrapper}>
-          <h1 className={classes.appbarTitle}>
-            My<span className={classes.colorText}>Island.</span>
-          </h1>
-          <IconButton>
-            <SortIcon className={classes.icon} />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+      <ResponsiveAppBar/>
 
       <Collapse
         in={checked}
