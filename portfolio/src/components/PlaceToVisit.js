@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
+      flexDirection: 'row',
     },
   },
 }));
@@ -21,6 +21,8 @@ export default function () {
     <div className={classes.root} id="place-to-visit">
       <ImageCard place={places[1]} checked={checked} />
       <ImageCard place={places[0]} checked={checked} />
+      <ImageCard place={places[1]} checked={checked} />
     </div>
+    
   );
 }

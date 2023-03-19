@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/Header';
 import PlaceToVisit from './components/PlaceToVisit';
+import Footer from './components/footer/footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
